@@ -1,15 +1,31 @@
-<h1><%= @displayed_song_name %></h1>
+<head>
+	<style>
+		header{
+		background: url("http://4.bp.blogspot.com/-gRknreE1e8Y/VHTs2YW_vUI/AAAAAAAAAOA/6q8mq700Mv4/s1600/duet-blog-lead.jpg")
+		}
+		h1{
+			color: rgba(215, 72, 243, 1);
+		}
+		h2{
+			color: rgba(46, 193, 243, 1);
+		}
+	</style>
+</head>
 
-<h2>From: <%= @song_movie %></h2>
-<h2>Lyrics: </h2>
-<p><%= @song_lyrics %></p>
+<body>
+	<h1><%= @displayed_song_name %></h1>
 
-<% random_number = rand() %>
-<% if random_number == 0 %>
-	<p><a href="https://www.youtube.com/watch?v=BROWqjuTM0g">Youtube video</a></p>
-<% else %>
-	<p><a href="https://www.youtube.com/watch?v=<%= @song_link %>">Youtube video</a></p>
-<% end %>
+	<h2>From: <%= @song_movie %></h2>
+	<h2>Lyrics: </h2>
+	<p><%= @song_lyrics %></p>
 
-<p><a href="/">Home</a></p>
-<p><a href="/index">Song Index</a></p>
+	<% random_number = rand() %>
+	<% if random_number == 0 %>
+		<p><a href="https://www.youtube.com/watch?v=BROWqjuTM0g">Youtube video</a></p>
+	<% else %>
+		<p><a href="https://www.youtube.com/watch?v=<%= @song_link %>">Youtube video</a></p>
+	<% end %>
+
+	<p><a href="/">Home</a></p>
+	<p><a href="/index">Song Index</a></p>
+</body>
