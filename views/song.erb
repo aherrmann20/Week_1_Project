@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <head>
 	<style>
 		header{
@@ -12,10 +14,12 @@
 	</style>
 </head>
 
+
 <body>
 	<h1><%= @displayed_song_name %></h1>
-
 	<h2>From: <%= @song_movie %></h2>
+	<p><a href="<%=@song_lyrics%>">Lyrics</a></p>
+
 	<h2>Lyrics: </h2>
 	<p><%= @song_lyrics %></p>
 
