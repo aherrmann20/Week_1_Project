@@ -1,4 +1,5 @@
 require "sinatra"
+require "pathname"
 
 get '/' do  
 	"hello!"
@@ -12,10 +13,13 @@ get "/songs/:song" do |song|
 	# 	redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 	# end
 
+	f = File.open("/lyrics/breaking_free.txt")
+	lyrics = f.read.split("\n")
+
 	@songs = {
 		breaking_free: {
 				movie: "High School Musical",
-				lyrics: "We're soarin/flyin",
+				lyrics: lyrics,
 				youtube_link: "O6fpbBoIrXI"
 		},
 		can_i_have_this_dance: {
@@ -25,7 +29,7 @@ get "/songs/:song" do |song|
 		},
 		can_you_feel_the_love_tonight: {
 				:movie => "The Lion King",
-				:lyrics => "With every step we're getting better",
+				:lyrics => "With every steps we're getting better",
 				:youtube_link => "aF4CWCXirZ8"
 		},
 		for_the_first_time_in_forever: {
@@ -38,7 +42,6 @@ get "/songs/:song" do |song|
 				:lyrics => "With every step we're getting better",
 				:youtube_link => "j5iFxpkz40o"
 		},
-		#add in apostrophe in @song_name in html
 		if_i_didnt_have_you: {
 				:movie => "Monsters, Inc.",
 				:lyrics => "With every step we're getting better",
@@ -100,9 +103,6 @@ end
 
 get "/songs" do  
 	@songs = ["Breaking Free", "Can I Have This Dance", "Can You Feel the Love Tonight", "For the first Time in Forever", "I See the Light", "If I Didnt Have You", "If I Never Knew You", "Love is an Open Door", "Love Will Find a Way", "We Are One", "A Whole New World", "You are the Music in Me"]
-
 	erb :song_index
-
-
 end
 

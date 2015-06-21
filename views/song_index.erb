@@ -3,8 +3,6 @@
 <ul>
 	<% @songs.each do |song| %>
 		<% song_underscored = song.split(' ').join('_').downcase %>
-		<% puts song_underscored %>
-		<% puts 'MEOW' %>
 		<li><a href="/songs/<%= song_underscored %>"><%= song %></a></li>
 	<% end %>
 </ul>
