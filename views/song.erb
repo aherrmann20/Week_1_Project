@@ -57,6 +57,23 @@
 
 	<div id="ian">
 		<img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-prn2/t31.0-8/1262550_10151670799497075_646944227_o.jpg" width=200>
-		<p>"All you need is a little faith, trust, and pixie dust."</p>
+		<% random_quote_number = rand(8) %>
+		<% if random_quote_number == 0 %>
+			<p>"All you need is a little faith, trust, and pixie dust."</p>
+		<% elsif random_quote_number == 1 %>
+			<p>"Some people are worth melting for."</p>
+		<% elsif random_quote_number == 2 %>
+			<p>"Just keep swimming!"</p>
+		<% elsif random_quote_number == 3 %>
+			<p>"Just think of happy thoughts and you'll fly."</p>
+		<% elsif random_quote_number == 4 %>
+			<p>"I touched the butt!"</p>
+		<% elsif random_quote_number == 5 %>
+			<p>"If you keep on believing, the dream that you wish will come true."</p>
+		<% elsif random_quote_number == 6 %>
+			<p>"You're never too old to be young."</p>
+		<% elsif random_quote_number == 7 %>
+			<p>"Believe you can, then you will."</p>
+		<% end %>
 	</div>
 </body>
