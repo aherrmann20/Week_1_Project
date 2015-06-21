@@ -20,11 +20,12 @@ get "/:song" do |song|
 	}
 	
 
-	# @song_name = params["song"]
-	# @song_movie = @songs[params["song"] :movie]
-	# @song_lyrics = @songs[:lyrics]
-	# @song_link = @songs[:params[song]]
-	@chosen_song = @songs[:params[song]]
+	@song_name = params["song"]
+	@song_movie = @songs[@song_name]
+	# puts @song_movie
+	# @song_lyrics = @songs[@song_name["lyrics"]]
+	# @song_link = @songs[@song_name["youtube_link"]
+	# @chosen_song = params["song"]
 
 	# [:youtube_link]]
 
