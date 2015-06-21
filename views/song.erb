@@ -2,9 +2,14 @@
 
 <h2>From: <%= @song_movie %></h2>
 <h2>Lyrics: </h2>
-	<p><%= @song_lyrics %></p>
-<p><a href="https://www.youtube.com/watch?v=<%= @youtube_link %>">Youtube video</a></p>
-<!-- <p><a href="<%= @songs[:song_link] %>">Youtube video</a></p> -->
+<p><%= @song_lyrics %></p>
+
+<% random_number = rand() %>
+<% if random_number == 0 %>
+	<p><a href="https://www.youtube.com/watch?v=BROWqjuTM0g">Youtube video</a></p>
+<% else %>
+	<p><a href="https://www.youtube.com/watch?v=<%= @song_link %>">Youtube video</a></p>
+<% end %>
 
 <p><a href="/">Home</a></p>
 <p><a href="/index">Song Index</a></p>
