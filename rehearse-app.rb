@@ -6,6 +6,12 @@ end
 
 
 get "/songs/:song" do |song|
+
+	# random_number = rand(3)
+	# if random_number == 0
+	# 	redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+	# end
+
 	@songs = {
 		breaking_free: {
 				movie: "High School Musical",
@@ -93,7 +99,7 @@ get "/songs/:song" do |song|
 end
 
 get "/songs" do  
-	@songs = ["Breaking Free", "Can I Have This Dance", "Can You Feel the Love Tonight", "For the first Time in Forever", "I See the Light", "If I Didn't Have You", "If I Never Knewy You", "Love is an Open Door", "Love Will Find a Way", "We Are One", "A Whole New World", "You are the Music in Me"]
+	@songs = ["Breaking Free", "Can I Have This Dance", "Can You Feel the Love Tonight", "For the first Time in Forever", "I See the Light", "If I Didnt Have You", "If I Never Knew You", "Love is an Open Door", "Love Will Find a Way", "We Are One", "A Whole New World", "You are the Music in Me"]
 
 	erb :song_index
 
