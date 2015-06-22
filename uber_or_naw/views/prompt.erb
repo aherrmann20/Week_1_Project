@@ -1,0 +1,81 @@
+<head>
+  <title>Robert Lee</title>
+  <style>
+    header {
+      padding: 40px 0 40px; 0;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+
+      color: white;
+    }
+    /* This element will == the height of the image */
+    .container {
+      position: relative;
+    }
+
+    /* This element is the background image */
+    .background-image {
+      width: 100%;
+      height: auto;
+      position: static;
+    }
+
+    /* This element contains the content which will be placed on top of the background image */
+    .content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    body {
+      font-family: helvetica;
+      font-size: 14px;
+    }
+    h2 {
+      font-size: 20px;
+      font-style: bold;
+      color: white;
+      
+    }
+    img {
+      margin: 0;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background: red;
+      color: white;
+    }
+    a {
+    	color: white;
+    }
+  </style>
+</head>
+
+
+
+<div class="container">
+  <img class="background-image" src="http://www.mycitybynight.co.za/wp-content/uploads/2013/01/longstreet.jpg" width="NATURAL WIDTH" height="NATURAL HEIGHT">
+  <div class="content">
+<header>
+<h1> Where are you going? </h1>
+
+  <input type="prompt" placeholder="Your Destination">
+  <a href="/prompt/response"><input type="submit"></a>
+ </header>
+  </div>
+</div>
+
+
+
